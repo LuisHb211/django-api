@@ -39,4 +39,10 @@ class ListaAlunosMatriculadosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula
         fields = ['aluno_nome', ]
-    
+        
+# Sera o novo serializer da versao 2, a diferenca para o V1 eh o celular
+class AlunoSerializerV2(serializers.ModelSerializer):
+    class Meta:
+        model  = Aluno
+        fields = ['id','nome','rg','cpf','data_nascimento','celular']
+        
