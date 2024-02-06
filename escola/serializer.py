@@ -9,7 +9,7 @@ Os dados em Python serão transformados em Json, e os em Json, transformados em 
 class AlunoSerializer(serializers.ModelSerializer):
     class Meta:
         model  = Aluno
-        fields = ['id','nome','rg','cpf','data_nascimento']
+        fields = ['id','nome','rg','cpf','data_nascimento','foto']
         
 class CursoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -44,5 +44,5 @@ class ListaAlunosMatriculadosSerializer(serializers.ModelSerializer):
 class AlunoSerializerV2(serializers.ModelSerializer):
     class Meta:
         model  = Aluno
-        fields = ['id','nome','rg','cpf','data_nascimento','celular']
+        fields = ['id','nome','rg','cpf','data_nascimento','celular','foto']
         
